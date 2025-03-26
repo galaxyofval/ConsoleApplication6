@@ -1,0 +1,47 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    // Declare all potentially necessary variables.
+    double length = 0;
+    double width = 0;
+    double base = 0;
+    double height = 0;
+    double radius = 0;
+    int choice = 0;
+    // Give the user a choice on what shape they'd like to calculate.
+    cout << "Welcome to Geometry Calculator! Please pick a shape to calculate. \n 1. Calculate the area of a circle. \n 2. Calculate the area of a rectangle. \n 3. Calculate the area of a triangle. \n 4. Quit. \n";
+    cin >> choice;
+    if (choice == 1) {
+        cout << "Circle Measurements: \n";
+        cout << "Please provide the radius. \n";
+        cin >> radius;
+        cout << "Area: " << (3.1415926535 * radius * radius); // Calculating the area of the circle.
+    }
+    else if (choice == 2) {
+        cout << "Rectangle Measurements: \n";
+        cout << "Please provide the length. \n";
+        cin >> length;
+        cout << "Please provide the width. \n";
+        cin >> width;
+        cout << "Area: " << (length * width); // Calculating the area of the rectangle.
+    }
+    else if (choice == 3) {
+        cout << "Triangle Measurements: \n";
+        cout << "Please provide the base. \n";
+        cin >> base;
+        cout << "Please provide the height. \n";
+        cin >> height;
+        cout << "Area: " << (base * height * 0.5); // Calculating the area of the triangle.
+    }
+    else if (choice == 4) {
+        return 0; // Quits out of the program.
+    }
+    else {
+        cout << "Invalid shape."; // Error handling.
+    }
+                
+    return 0;
+}
