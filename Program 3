@@ -1,3 +1,4 @@
+// Program 3
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -18,7 +19,12 @@ int main()
         cout << "Circle Measurements: \n";
         cout << "Please provide the radius. \n";
         cin >> radius;
+        if (radius >= 0) {
         cout << "Area: " << (3.1415926535 * radius * radius); // Calculating the area of the circle.
+        }
+        else {
+        cout << "Invalid radius.";
+        }
     }
     else if (choice == 2) {
         cout << "Rectangle Measurements: \n";
@@ -26,7 +32,12 @@ int main()
         cin >> length;
         cout << "Please provide the width. \n";
         cin >> width;
+        if (length > 0 && width > 0) {
         cout << "Area: " << (length * width); // Calculating the area of the rectangle.
+        }
+        else {
+        cout << "Invalid length or width.";
+        }
     }
     else if (choice == 3) {
         cout << "Triangle Measurements: \n";
@@ -34,7 +45,12 @@ int main()
         cin >> base;
         cout << "Please provide the height. \n";
         cin >> height;
+        if (base > 0 && height > 0) {
         cout << "Area: " << (base * height * 0.5); // Calculating the area of the triangle.
+        }
+        else {
+        cout << "Invalid base or height.";
+        }       
     }
     else if (choice == 4) {
         return 0; // Quits out of the program.
