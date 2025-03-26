@@ -35,3 +35,4 @@ int main()
     else {
         cout << "Sorry, we don't accept packages over 20kg.";
 }
+}
