@@ -7,26 +7,30 @@ int main()
 {
 // Declare the variable for the package weight.
     double packageWeight = 0;
+    double miles = 0;
     cout << "Welcome to Fast Freight Shipping Company! \n Please insert your package weight in kg. \n";
     cin >> packageWeight;
+    cout << "How many miles is it going to go? \n";
+    cin >> miles;
+    if (miles < 10 || miles > 3000) {
+        cout << "Invalid amount of miles.";
+        return 0;
+    }
 // Check the weight of the package to see if it falls into any of the specific categories.
     if (packageWeight <= 0) {
         cout << "Does your package have antigravity on it? This is an invalid package weight.";
     }
     else if (packageWeight < 2) {
-       cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 1.1);
+       cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 1.1) * (miles / 500);
     }
     else if (packageWeight < 6 || packageWeight == 6) {
-        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 2.2);
+        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 2.2) * (miles / 500);
     }
     else if (packageWeight < 10 || packageWeight == 10) {
-        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 3.7);
+        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 3.7) * (miles / 500);
     }    
     else if (packageWeight < 20 || packageWeight == 20) {
-        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 4.8);
+        cout << fixed << setprecision(2) << "Your total fare will be " << (packageWeight * 4.8) * (miles / 500);
     }    
     else {
         cout << "Sorry, we don't accept packages over 20kg.";
-    }
-    return 0;
-}
